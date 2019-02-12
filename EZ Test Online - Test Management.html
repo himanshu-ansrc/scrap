@@ -1,0 +1,47 @@
+
+<!-- saved from url=(0068)http://ezto-demo.mheducation.com/ansrsource/13570164531143568829.tp4 -->
+<html><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>EZ Test Online - Test Management</title><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="expires" content="-1"><style type="text/css" media="screen"><!--body   { color: black; font-size: 9pt; font-family: Verdana, Arial, Helvetica, Sanserif, Arial Unicode MS; background-color: white }input, textarea	{ color: black; background-color: #e0e0e0; font-size: 8pt; font-family: Verdana, Arial, Helvetica, Sanserif, Arial Unicode MS }select	{ color: black; background-color: #e0e0e0; font-size: 7pt; font-family: Verdana, Arial, Helvetica, Sanserif, Arial Unicode MS }th { color: white; background-color: black; font-weight: bold; font-size: 10pt }td { text-align: center; }a { font-size: 8pt; color: blue }.tr1	{ background-color: #e0e0e0; font-size: 9pt }.tr2   	{ background-color: white; font-size: 9pt }.tr3   	{ background-color: white; font-size: 9pt }td.doubleUnderline { border: none; border-bottom: double windowtext 2.25pt }
+.tha { color: white; background-color: black; font-weight: bold; font-size: 10pt; text-decoration: none }.btn	{ color: black; font-weight: bold }.errorMsg	{ color: red; font-size: 10pt; font-weight: bold }.errorMessage { text-align: center; font-weight: bold; color: red; font-size: 12pt }.navlink	{ font-size: 9pt }.itemHelp	{ font-weight: bold; font-size: 12pt; text-decoration: none; color: navy }.itemTitle	{ font-weight: bold; font-size: 12pt }.info { color: black; font-size: 7pt }.footer { color: black; font-size: 7pt; text-align: center }.productTitle	{ font-weight: bold; font-size: 14pt; color: navy }--></style><script type="text/javascript">
+function helpMessage( theTag )
+{
+  theURL= '/servlet/TestPilot4/?help=' + theTag;
+  theWin= window.open( theURL, 'Info', 'toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=yes,copyhistory=no,width=625,height=450,screenX=20,screenY=20,left=20,top=20' );
+  theWin.focus();
+}
+function v7command( theIndex ) {
+  if (theIndex == 0) document.testNavigator.subrequest.value="v7_select";
+  else if (theIndex == 2) document.testNavigator.subrequest.value="v7_cat";
+  else if (theIndex == 3) document.testNavigator.subrequest.value="v7_media";
+  else if (theIndex == 4) document.testNavigator.subrequest.value="v7_qimport";
+  else if (theIndex == 5) document.testNavigator.subrequest.value="v7_export";
+  else if (theIndex == 6) document.testNavigator.subrequest.value="v7_pool";
+  else if (theIndex == 7) document.testNavigator.subrequest.value="v7_settings";
+  else if (theIndex == 8) document.testNavigator.subrequest.value="v7_scoring";
+  else if (theIndex == 9) document.testNavigator.subrequest.value="v7_records";
+  else document.testNavigator.subrequest.value="v7_listQuestions";
+  document.testNavigator.manageTest.value='';
+  document.testNavigator.target= '_top';
+  document.testNavigator.submit();
+}
+function preview() {
+  document.testNavigator.manageTest.value="previewTest";
+  document.testNavigator.bogus.value= new String(Math.floor(Math.random() * 1000));
+  document.testNavigator.target= 'pv13570164531143567';
+  document.testNavigator.submit();
+}
+function gocourse() {
+  document.testNavigator.manageTest.value='';
+  document.testNavigator.target= '_top';
+  document.testNavigator.REQUEST.value='manageIndex';
+  document.testNavigator.action='http://ezto-demo.mheducation.com/ansrsource/index13570164303231899.tpx';
+  document.testNavigator.submit();
+}
+function gohome() {
+  document.testNavigator.manageTest.value='';
+  document.testNavigator.target= '_top';
+  document.testNavigator.REQUEST.value='';
+  document.testNavigator.action='http://ezto-demo.mheducation.com/mycourses.tpx';
+  document.testNavigator.submit();
+}
+</script>
+</head><body onload="window.name=&#39;topFrame&#39;;"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td width="170" class="productTitle" style="text-align: left">&nbsp;<a target="_top" href="http://ezto-demo.mheducation.com/mycourses.tpx" style="font-size: 14pt; text-decoration: none; color: navy" title="Home"><img align="top" src="./EZ Test Online - Test Management_files/logo.jpg" border="0"></a></td><td style="text-align: center; vertical-align: middle; font-size: 14pt">Akshay</td><td width="170" align="right" style="text-align: right; vertical-align: middle"><a target="_top" href="http://ezto-demo.mheducation.com/servlet/TestPilot4/?logout=true">Logout</a>&nbsp;&nbsp;<a href="javascript:helpMessage(&#39;v7qedit.htm&#39;);">Help</a>&nbsp;<a target="_new" href="http://www.mheducation.com/" title="McGraw-Hill Education"><img align="top" src="./EZ Test Online - Test Management_files/mh_cube.gif" border="0"></a></td></tr><tr style="font-size: 2pt; background-color: #e0e0e0"><td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="2"><tbody><tr><td style="text-align: left">&nbsp;<span style="font-size: 10pt; font-weight: bold; color: #146CB3">Menu</span>&nbsp;<select name="v7selector" onchange="v7command( selectedIndex );" style="background-color: white; font-size: 10pt" title="Test Management Menu" alt="Test Management Menu"><optgroup label="Test Construction"><option value="0">Select Questions from Banks</option><option selected="" value="1">Organize/Edit Questions</option><option value="2">Categorize Questions</option><option value="3">Multimedia Content</option><option value="4">Import from Text File</option><option value="5">Export to Print/CMS Formats</option></optgroup><optgroup label="Online Delivery"><option value="6">Question Pooling</option><option value="7">Online Settings</option><option value="8">Scoring and Reporting</option><option value="9">Record Keeping</option></optgroup></select>&nbsp;<a href="javascript:preview();" title="Preview"><img align="top" src="./EZ Test Online - Test Management_files/btn_preview.gif" alt="Preview" border="0"></a>&nbsp;&nbsp;<a href="http://ezto-demo.mheducation.com//hm.tpx?todo=PRODUCTION_REQUEST&amp;ezid=13570164531143567&amp;pqk=f0165bf7649d99dff73cf4a64cfc0ac9" title="Production Assistance Console" target="pac">PAC</a>&nbsp;</td><td style="text-align: right">&nbsp;<a href="javascript:gocourse();"><img align="top" src="./EZ Test Online - Test Management_files/btn_course.gif" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:gohome();"><img align="top" src="./EZ Test Online - Test Management_files/btn_home.gif" border="0"></a>&nbsp;</td></tr></tbody></table></td></tr></tbody></table><iframe name="testContent" width="100%" height="80%" marginwidth="0" marginheight="0" style="border: 1px solid #000000" src="./EZ Test Online - Test Management_files/13570164531143568829.html">Requires a modern browser - e.g. Safari 1, Netscape 6 or IE 5</iframe><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr class="footer"><td colspan="3" style="vertical-align: top; text-align: center">EZ Test Online (43b020) is Copyright ©2019 by <a style="font-size: 8pt" target="_new" href="http://www.mheducation.com/">McGraw-Hill Education</a>.</td></tr><tr class="footer"><td width="310" style="vertical-align: bottom; text-align: right"><a target="_new" href="http://www.mheducation.com/" title="McGraw-Hill Education"><img align="top" src="./EZ Test Online - Test Management_files/mhe.gif" border="0"></a></td><td style="vertical-align: top; text-align: center"><a style="font-size: 8pt" target="_new" href="http://www.mhhe.com/eztest/">Support</a>&nbsp;-&nbsp;<a style="font-size: 8pt" target="_new" href="http://www.mheducation.com/terms-use">Terms of Use</a>&nbsp;-&nbsp;<a style="font-size: 8pt" target="_new" href="http://www.mheducation.com/privacy-and-cookie-notice">Privacy Notice</a></td><td width="310" style="vertical-align: bottom; text-align: left"><a target="_new" href="http://www.mheducation.com/" title="McGraw-Hill Education" style="font:12px Helvetica;color:#333333;">McGraw-Hill Education</a></td></tr></tbody></table><form name="testNavigator" method="post" action="http://ezto-demo.mheducation.com/ansrsource/13570164531143568829.tp4" target="_top"><input type="hidden" name="REQUEST" value="manageTest"><input type="hidden" name="manageTest" value=""><input type="hidden" name="subrequest" value=""><input type="hidden" name="bogus" value=""></form></body></html>
